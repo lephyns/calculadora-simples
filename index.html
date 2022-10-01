@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="principal-container">
+        <div class="center">
+
+            <div class="p-container">
+                <p>Calculadora de números inteiros</p>
+            </div>
+
+            <div class="inputs">
+
+                <div class="input">
+                    <input class="num1" type="number" placeholder="Digite um número inteiro"><br>
+                </div>
+
+                <div class="input">
+                    <input class="num2" type="number" placeholder="Digite outro número inteiro"><br>
+                </div>
+
+            </div>
+
+            <div class="button">
+                <button onclick="clicar()">Clique aqui para somar</button>
+            </div>
+
+            <div class="result">
+                <p class="p-result">O resultado da soma é:</p>
+                <p class="resultado"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function clicar() {
+            var num1 = document.querySelector(".num1").value;
+            var num2 = document.querySelector(".num2").value;
+
+            var resultado = parseInt(num1) + parseInt(num2);
+            document.querySelector(".resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>
